@@ -3,37 +3,13 @@
     <button class="btn btn-success">New Recipe</button>
   </div>
 </div>
-<hr>
+<hr />
 <div class="row">
   <div class="col-xl-12">
-    <a href="#" class="list-group-item clearfix list-group-item-action" *ngFor="let item of recipes">
-      <div class="float-start">
-        <h4 class="list-group-item-primary">{{ item.name }}</h4>
-        <p class="list-group-item-secondary">{{ item.description }}</p>
-      </div>
-      <span class="float-end">
-        <img
-          src="{{ item.imagePath }}"
-          alt=""
-          class="img-thumbnail"
-          style="max-height: 100px"
-        />
-      </span>
-    </a>
-    <a href="#" class="list-group-item clearfix list-group-item-action" *ngFor="let item of recipes">
-      <div class="float-start">
-        <h4 class="list-group-item-primary">{{ item.name }}</h4>
-        <p class="list-group-item-secondary">{{ item.description }}</p>
-      </div>
-      <span class="float-end">
-        <img
-          src="{{ item.imagePath }}"
-          alt=""
-          class="img-thumbnail"
-          style="max-height: 100px"
-        />
-      </span>
-    </a>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipeEle of recipes"
+      [recipe]="recipeEle"
+      (selectedRec)="selectedRecipe(recipeEle)"
+    ></app-recipe-item>
   </div>
 </div>
