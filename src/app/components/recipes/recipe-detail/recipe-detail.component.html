@@ -32,8 +32,10 @@
             >Add Ingredients to Shopping List</a
           >
         </li>
-        <li><a class="dropdown-item" href="#">Edit The Recipe</a></li>
-        <li><a class="dropdown-item" href="#">Delete The Recipe</a></li>
+        <li>
+          <a class="dropdown-item" (click)="onEditRecipe()">Edit The Recipe</a>
+        </li>
+        <li><a class="dropdown-item">Delete The Recipe</a></li>
       </ul>
     </div>
   </div>
